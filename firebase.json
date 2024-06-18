@@ -20,7 +20,7 @@
     }
   ],
   "hosting": {
-    "public": "public",
+    "public": "dist/my-portfolio/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
