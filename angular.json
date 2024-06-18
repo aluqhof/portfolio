@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/my-portfolio",
+            "outputPath": "public",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -106,11 +106,7 @@
           }
         },
         "deploy": {
-          "builder": "@angular/fire:deploy",
-          "options": {
-            "site": "my-portfolio",
-            "repo": "https://github.com/aluqhof/portfolio.git"
-          }
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
