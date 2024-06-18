@@ -11,10 +11,14 @@ export class AppComponent {
   title = 'my-portfolio';
 
   ngOnInit(): void {
-    initFlowbite();
-    AOS.init({
-      disable: 'mobile',
-    });
-    window.addEventListener('load', AOS.refresh);
+    if (typeof document !== 'undefined') {
+      initFlowbite();
+      AOS.init({
+        disable: 'mobile',
+      });
+    }
+    if(typeof window !== 'undefined'){
+      window.addEventListener('load', AOS.refresh);
+    }
   }
 }
